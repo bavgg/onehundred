@@ -8,9 +8,9 @@ function Navbar() {
       <div className=" relative">
         <input
           placeholder="Search for tags"
-          className=" border-gray rounded-sm focus:outline-none pl-6 pr-2"
+          className="py-1 border-gray rounded-md focus:outline-blue-300 focus:border-transparent pl-7 pr-2"
         />
-        <div className=" absolute top-1 left-1">
+        <div className=" absolute top-2 left-2 text-gray-500">
           <Search fill="currentcolor" width="16" height="16" />
         </div>
       </div>
@@ -19,13 +19,26 @@ function Navbar() {
       <div></div>
 
       {/* filter by tags */}
-      <Reset fill="currentcolor" width="16" height="16" />
-      <div className="flex flex-wrap gap-4">
-        {tags.map((tag) => (
-          <div className=" bg-sky-50 rounded-md p-1 text-blue-400 text-sm">
-            {tag}
-          </div>
-        ))}
+      <div className="mt-2">
+        
+
+        <div className="flex justify-between">
+            <div className="text-gray-400 mb-2 text-base">Select tags </div>
+            
+            {/* reset */}
+            <div className="text-blue-500 flex items-center justify-center">
+              <Reset fill="currentcolor" width="16" height="16" />
+            </div>
+        </div>
+
+        {/* tags */}
+        <div className="flex flex-wrap gap-4">
+          {tags.map((tag) => (
+            <div className=" cursor-pointer bg-sky-50 rounded-md p-1 text-blue-400 text-sm">
+              {tag}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

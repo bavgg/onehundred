@@ -4,6 +4,6 @@
 
 @layer components {
   .border-gray {
-    @apply border-gray-400 border;
+    @apply border-gray-300 border;
   }
 }
