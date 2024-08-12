@@ -1,12 +1,11 @@
 import "./App.css";
+import Projects from "./components/Projects";
 
 function App() {
 
   return (
     <>
-      <div className="bg-red-50">
-        <span>Hello, World!</span>
-      </div>
+      <Projects/> 
     </>
   );
 }
