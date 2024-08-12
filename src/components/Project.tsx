@@ -4,13 +4,15 @@ type ProjectProps = {
   project: {
     name: string;
     description: string;
-    tags: [];
+    tags: string[];
   };
 };
 
 function Project({ project }: ProjectProps) {
   return (
-    <div className=" p-4 rounded-md border-gray-400 border">
+    <div className=" p-4 rounded-md border-gray-400 border max-w-1/2">
+
+      {/* project name */}
       <a
         href="https://google.com"
         target="_blank"
@@ -19,6 +21,8 @@ function Project({ project }: ProjectProps) {
         <span className=" font-[700]">{project.name}</span>
         <ExternalLink fill="currentcolor" width="16" height="16" />
       </a>
+``
+      {/* desccription */}
       <span className=" text-base text-gray-500">{project.description}</span>
 
       {/* tags */}
